@@ -1,0 +1,155 @@
+/* colors:
+
+  darkgreen:   #00672c
+  green:       #02913f
+  lightgreen:  #d3ebb0
+  orange:      #f75f00
+  lightorange: #ff8b42   */
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background: #fff;
+  color: #333;
+  font: 11px Verdana, Arial, Helvetica, sans-serif;  
+  line-height: 14px;
+}
+
+a {
+  display: inline-block;
+  color: #f75f00;
+  font-weight:bold;
+  text-decoration: none;    
+}
+a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #f75f00;
+  transition: width 0.4s ease-in-out;
+}
+a:hover:after {
+  width: 100%;
+}
+
+img {
+  border: 0;
+}
+
+.header {
+  height: 100px;
+  background: #02913f;
+  color: #fff;
+}
+.header #job_swf {
+  width: 80%; max-height: 100px;
+  display: block;
+  margin: 0 auto;  
+}
+
+.date {
+  height: 13px;
+  background: #d3ebb0;
+  border-top: 1px solid #00672c;
+  border-bottom: 1px solid #00672c;
+  padding: 5px 10px;
+}
+
+.content {
+  height: calc(100% - 150px);
+  background: #fff;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.menu {
+  width: 165px; height: calc(100% - 20px);
+  padding-top: 20px;  
+  background: #02913f;
+}
+.menu a:first-child {  
+  border-top: 1px solid #d3ebb0;
+}
+.menu a {  
+  color: #ff8b42;
+  display: block;
+  border-bottom: 1px solid #d3ebb0;
+  transition: all 0.4s ease-in-out;
+  font-size: 12px;
+  padding: 10px 15px;  
+}
+.menu a:hover {
+  color: #f75f00;
+  background: #d3ebb0;
+}
+.menu a:after {
+  display: none;
+}
+
+.article {
+  font-size: 13px;
+  line-height: 15px;
+  width: calc(100% - 380px); height: 100%;  
+  text-align: center;
+  padding: 10px 25px;
+}
+.article h3 {
+  text-align: left;
+}
+.article .tel {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.sidebar {
+  width: 165px; height: 100%;
+  font-size: 9px;
+}
+.sidebar div {
+  margin-bottom: 15px;
+}
+.sidebar img {  
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer {
+  background: #d3ebb0;
+  position: fixed;
+  left: 0; bottom: 0;
+  width: 100%; height: 24px;
+  border-top: 1px solid #00672c;
+}
+.footer p {
+  text-align: center;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .menu, .article, .sidebar {
+    height: auto; width: auto;
+    text-align: center;
+  }
+  .left, .right {
+    float: none;
+  }
+  .sidebar {
+    padding-bottom: 25px;
+  }
+  .sidebar div {
+    display: inline-block;
+  }
+}
+
